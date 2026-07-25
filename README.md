@@ -56,6 +56,7 @@ Features
 - tmux-yank — copy to system clipboard
 - tmux-resurrect / continuum (via TPM) — session persistence
 - Git status — current branch and changes in status bar
+```
 Related
 Neovim configuration is maintained separately:
 https://github.com/Adibayuluthfiansyah/nvim-config (https://github.com/Adibayuluthfiansyah/nvim-config)
