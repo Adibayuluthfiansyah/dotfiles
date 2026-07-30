@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Lock file path
+LOCK="/tmp/mic-mute-lock"
+
+# Check if we're handling a key release (don't toggle back)
+if [[ -f "$LOCK" ]]; then
+    rm -f "$LOCK"
+    exit 0
+fi
+
+# Create lock file
+touch "$LOCK"
+
+# Main toggle logic
+SOURCE=$(pactl get-default-source)
+STATE=$(pactl get-source-mute "$SOURCE" | awk '{print $2}')
+
+if [ "$STATE" = "yes" ]; then
+    pactl set-source-mute "$SOURCE" 0
+    notify-send "Microphone UNMUTED" -t 1000
+else
+    pactl set-source-mute "$SOURCE" 1
+    notify-send "Microphone MUTED" -t 1000
+fi
+
+# Clean up lock file after delay
+(sleep 2; rm -f "$LOCK" 2>/dev/null) &

@@ -1,0 +1,7 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR --export AGENT_ROUTER_TOKEN:sk\x2dTbSgf7HzZTDFStHXu07WZ81satlY6I6OKSS8jLFocssz90Dw
+SETUVAR --export --path PATH:/home/adibayu/\x2elocal/share/mise/installs/go/1\x2e25\x2e5/bin\x1e/home/adibayu/\x2elocal/share/mise/installs/node/25\x2e2\x2e1/bin\x1e/opt/sonar\x2dscanner/bin\x1e/home/adibayu/\x2ebun/bin\x1e/home/adibayu/\x2eopencode/bin\x1e/home/adibayu/\x2elocal/share/mise/shims\x1e/home/adibayu/\x2elocal/share/omarchy/bin\x1e/opt/sonar\x2dscanner/bin\x1e/opt/sonar\x2dscanner/bin\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/bin\x1e/var/lib/flatpak/exports/bin\x1e/usr/lib/jvm/default/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl\x1e/home/adibayu/go/bin
+SETUVAR __fish_initialized:4300
+SETUVAR fish_color_autosuggestion:555
+SETUVAR fish_user_paths:/home/adibayu/\x2ebun/bin\x1e/home/adibayu/\x2eopencode/bin

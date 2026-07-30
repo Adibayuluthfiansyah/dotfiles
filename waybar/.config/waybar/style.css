@@ -1,0 +1,353 @@
+@import "../omarchy/current/theme/waybar.css";
+
+* {
+  font-family: "SF Pro Display", "SF Mono", sans-serif;
+  font-size: 12pt;
+  border: none;
+  font-weight: 600;
+  border-radius: 0;
+  min-height: 0;
+}
+
+.modules-left,
+.modules-right,
+.modules-center {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 999px;
+  padding: 4px 12px;
+  -webkit-border-radius: 999px;
+  -moz-border-radius: 999px;
+  -ms-border-radius: 999px;
+  -o-border-radius: 999px;
+} 
+
+.modules-right {
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 999px;
+    padding: 0 12px;
+}
+
+ .modules-left > * > *,
+.modules-right > * > *,
+.modules-center > * > * {
+  padding: 0 2px;
+}
+
+#workspaces button {
+  padding: 0 3px;
+  margin: 0 2px;
+  border-radius: 999px;
+  color: #a6adc8;
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -ms-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+}
+
+#workspaces button.active {
+  color: #ffffff;
+  background: rgba(255,255,255,0.18);
+  border-radius: 999px;
+  min-width: 28px;
+  padding: 0 10px;
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 0 10px rgba(255,255,255,0.15);
+  -webkit-border-radius: 999px;
+  -moz-border-radius: 999px;
+  -ms-border-radius: 999px;
+  -o-border-radius: 999px;
+}
+
+#workspaces button:hover {
+    background: rgba(255,255,255,0.10);
+    color: white;
+}
+
+#workspaces button.empty {
+  opacity: 0.4;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+#custom-scratchpad, #custom-whatsapp, #custom-instagram,
+#custom-video, #custom-file, #custom-kitty, 
+#custom-browser, #custom-obsidian, #custom-chatgpt {
+    color: #cdd6f4;
+    padding: 0 6px;
+    opacity: 0.8;
+}
+
+#custom-whatsapp:hover, #custom-browser:hover, 
+#custom-kitty:hover, #custom-obsidian:hover{
+    opacity: 1;
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
+}
+
+
+#custom-screenrecording-indicator,
+#custom-idle-indicator,
+#custom-notification-silencing-indicator {
+  min-width: 12px;
+  margin-left: 5px;
+  margin-right: 0;
+  font-size: 10px;
+  padding-bottom: 1px;
+}
+
+#custom-screenrecording-indicator.active {
+  color: #a55555;
+}
+
+#custom-nowplaying {
+  background: rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 6px 14px;
+  font-size: 11px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+#pulseaudio, #network, #bluetooth, #battery, #backlight, #custom-netspeed {
+    padding: 0 8px;
+    color: #ffffff;
+}
+
+
+#clock,
+#battery,
+#cpu,
+#pulseaudio,
+#network,
+#bluetooth,
+#backlight,
+#custom-exit,
+#custom-omarchy,
+#custom-update,
+#custom-netspeed,
+#custom-power_profile,
+#custom-scratchpad,
+#custom-browser,
+#custom-whatsapp,
+#custom-instagram,
+#custom-video,
+#custom-file,
+#custom-kitty,
+#custom-chatgpt,
+#custom-obsidian,
+#custom-waydroid,
+
+#tray {
+  padding: 0 10px;
+}
+
+#custom-chatgpt {
+  background-image: url("/home/ihzabaker/Projects/myhyprland/dotfiles/.config/waybar/openai.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin: 10px 10px;
+}
+
+#custom-omarchy {
+    font-size: 18px;
+    color: #ffffff;
+    margin-right: 10px;
+    padding-left: 5px;
+    text-shadow: 0 0 8px rgba(255,255,255,0.3);
+}
+
+#custom-nowplaying {
+  background-color: @background;
+  font-size: 11px;
+  color: @foreground;
+  border-radius: 5px 5px 5px 5px;
+  padding: 0px 10px 0px 10px;
+  margin: 3px 0px 3px 15px;
+  opacity: 1;
+  border: 1px solid @border_color;
+}
+
+#custom-nowplaying.playing {
+  background-color: @background;
+  color: @foreground;
+}
+
+#custom-nowplaying.paused {
+  background-color: @background;
+}
+
+#custom-quicklink_chromium,
+#custom-quicklink_edge,
+#custom-quicklink_firefox,
+#custom-quicklink_browser,
+#custom-quicklink_filemanager,
+#custom-quicklink_email,
+#custom-quicklink_thunderbird,
+#custom-quicklink_calculator,
+#custom-sidepad,
+#custom-quicklink1,
+#custom-quicklink2,
+#custom-quicklink3,
+#custom-quicklink4,
+#custom-quicklink5,
+#custom-quicklink6,
+#custom-quicklink7,
+#custom-quicklink8,
+#custom-quicklink9,
+#custom-quicklink10,
+#custom-waybarthemes {
+  margin-right: 16px;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0.8;
+  /* color: @foreground; */
+}
+
+#custom-quicklink_chromium,
+#custom-quicklink_edge,
+#custom-quicklink_firefox,
+#custom-quicklink_browser,
+#custom-quicklink_filemanager,
+#custom-quicklink_email,
+#custom-quicklink_thunderbird,
+#custom-quicklink_calculator,
+#custom-quicklink1,
+#custom-quicklink2,
+#custom-quicklink3,
+#custom-quicklink4,
+#custom-quicklink5,
+#custom-quicklink6,
+#custom-quicklink7,
+#custom-quicklink8,
+#custom-quicklink9,
+#custom-quicklink10 {
+  margin-right: 18px;
+}
+
+
+window#waybar {
+  background-color: transparent;
+  margin: 5px 10px 0 10px; /* Jarak: Atas Kanan Bawah Kiri */
+  border-radius: 12px;     /* Sudut membulat */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Garis tepi tipis */
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+#waybar > box {
+    margin: 6px 10px 0 10px;
+}
+
+
+#clock,
+#battery,
+#cpu,
+#pulseaudio,
+#network,
+#bluetooth,
+#tray,
+#custom-* {
+  border-radius: 12px;
+  padding: 6px 10px;
+  transition: all 0.25s ease;
+  
+}
+
+
+
+#clock:hover,
+#battery:hover,
+#cpu:hover,
+#pulseaudio:hover,
+#network:hover,
+#bluetooth:hover,
+#tray:hover,
+/* #custom-* :hover {
+  background: rgba(255, 255, 255, 0.12);
+} */
+ #custom-scratchpad:hover,
+#custom-browser:hover,
+#custom-whatsapp:hover,
+#custom-instagram:hover,
+#custom-video:hover,
+#custom-file:hover,
+#custom-kitty:hover,
+#custom-obsidian:hover,
+#custom-omarchy:hover {
+  background: rgba(255,255,255,0.10);
+  border-radius: 10px;
+}
+
+#pulseaudio, #network, #bluetooth, #battery, #backlight, #custom-netspeed {
+    padding: 0 8px;
+    color: #ffffff;
+}
+
+#battery.charging { color: #a6e3a1; } /* Hijau */
+#battery.warning { color: #fab387; }  /* Orange */
+#battery.critical { color: #f38ba8; } /* Merah */
+#network.disconnected { color: #f38ba8; }
+
+
+tooltip {
+  background: rgba(20, 20, 30, 0.95);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+tooltip label {
+  color: #ffffff;
+  padding: 4px;
+}
+
+#custom-voxtype {
+  min-width: 12px;
+  margin: 0 0 0 7.5px;
+}
+
+#custom-voxtype.recording {
+  color: #a55555;
+}
+
+#custom-idle-indicator.active,
+#custom-notification-silencing-indicator.active {
+  color: #a55555;
+}
+
+#cpu,
+#battery,
+#network,
+#pulseaudio,
+#bluetooth {
+  color: rgba(255,255,255,0.85);
+}
+
+#temperature {
+    color: rgba(255,255,255,0.85);
+}
+
+#clock{
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 0 24px;
+    min-width: 220px;
+    border-radius: 999px;
+    font-weight: 700;
+}
+
+#network,
+#bluetooth,
+#pulseaudio,
+#temperature,
+#cpu,
+#battery,
+#custom-netspeed {
+    background: transparent;
+    margin: 0;
+    padding: 0 6px;
+}
