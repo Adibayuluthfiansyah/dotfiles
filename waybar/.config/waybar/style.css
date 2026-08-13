@@ -12,8 +12,8 @@
 .modules-left,
 .modules-right,
 .modules-center {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.04);
+  border: none;
   border-radius: 999px;
   padding: 4px 12px;
   -webkit-border-radius: 999px;
@@ -23,7 +23,7 @@
 } 
 
 .modules-right {
-    border: 1px solid rgba(255,255,255,0.09);
+    border: none;
     border-radius: 999px;
     padding: 0 12px;
 }
@@ -108,7 +108,7 @@
   border-radius: 14px;
   padding: 6px 14px;
   font-size: 11px;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: none;
 }
 
 #pulseaudio, #network, #bluetooth, #battery, #backlight, #custom-netspeed {
@@ -168,7 +168,7 @@
   padding: 0px 10px 0px 10px;
   margin: 3px 0px 3px 15px;
   opacity: 1;
-  border: 1px solid @border_color;
+  border: none;
 }
 
 #custom-nowplaying.playing {
@@ -230,8 +230,8 @@
 
 
 window#waybar {
-  background-color: transparent;
-  margin: 5px 10px 0 10px; /* Jarak: Atas Kanan Bawah Kiri */
+  background-color: rgba(255, 255, 255, 0.02); /* mask alpha utk hyprglass */
+  margin: 5px 10px 5px 10px; /* Jarak: Atas Kanan Bawah Kiri */
   border-radius: 12px;     /* Sudut membulat */
   border: 1px solid rgba(255, 255, 255, 0.1); /* Garis tepi tipis */
     color: #ffffff;
@@ -240,7 +240,7 @@ window#waybar {
 }
 
 #waybar > box {
-    margin: 6px 10px 0 10px;
+    margin: 0 10px 0 10px;
 }
 
 
@@ -333,7 +333,7 @@ tooltip label {
 
 #clock{
     background: rgba(255,255,255,0.02);
-    border: 1px solid rgba(255,255,255,0.08);
+    border: none;
     padding: 0 24px;
     min-width: 220px;
     border-radius: 999px;

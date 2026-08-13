@@ -6,6 +6,8 @@
   "height": 45,
   "margin-top": 5,
   "margin-bottom": 0,
+  "margin-left": 10,
+  "margin-right": 10,
   // Load Modules
   "include": [
     "~/.config/waybar/waybar-quicklinks.json"
