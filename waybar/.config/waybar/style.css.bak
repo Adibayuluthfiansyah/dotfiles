@@ -81,12 +81,6 @@
     opacity: 0.8;
 }
 
-/* macOS-style brand colors per app icon (Step 3B) */
-#custom-scratchpad { color: rgba(29, 185, 84, 0.75); }   /* Music — muted Spotify green */
-#custom-whatsapp { color: rgba(37, 211, 102, 0.75); }    /* WhatsApp — muted green */
-#custom-instagram { color: rgba(225, 48, 108, 0.75); }   /* Instagram — muted pink */
-#custom-browser { color: rgba(66, 133, 244, 0.75); }     /* Chrome — muted blue */
-
 #custom-whatsapp:hover, #custom-browser:hover, 
 #custom-kitty:hover, #custom-obsidian:hover{
     opacity: 1;

@@ -50,6 +50,7 @@ fi
 # Dynamic visible length
 visible_chars=$(( ${#track} * 1 / 2 ))
 [[ $visible_chars -lt $VISIBLE_MIN ]] && visible_chars=$VISIBLE_MIN
+[[ $visible_chars -gt 30 ]] && visible_chars=30
 
 # Handle play/pause behavior
 if [[ "$player_status" == "Paused" ]]; then

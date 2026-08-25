@@ -1,3 +1,10 @@
+alias cat='bat'
+alias find='fd'
+alias grep='rg'
+alias ports='sudo ss -tulnp'
+alias myip='curl -s ifconfig.me'
+alias jctl='journalctl -xe'
+
 # ---------------------------
 # 📁 File System
 # ---------------------------
@@ -45,7 +52,7 @@ end
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-alias hyprr='cd /home/ihzabaker/Projects/myhyprland/dotfiles/.config/hypr'
+alias hyprr='cd $HOME/Projects/myhyprland/dotfiles/.config/hypr'
 alias editfishalias='n ~/.config/fish/conf.d/aliases.fish'
 
 # ---------------------------
@@ -116,7 +123,7 @@ alias about='fastfetch'
 
 # hyprland things
 alias checkclass='hyprctl clients'
-alias matugen='cd /home/ihzabaker/Projects/myhyprland/dotfiles/.config/hypr/scripts/ & ./set-theme.sh'
+alias matugen='cd $HOME/dotfiles/hypr/.config/hypr/scripts/ && ./set-theme.sh'
 
 # power profile
 alias save='powerprofilesctl set power-saver'

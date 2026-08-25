@@ -319,7 +319,6 @@
   "custom/nowplaying": {
     "exec": "~/.config/waybar/scripts/now-playing.sh",
     "format": "  {text}",
-    "max-length": 35,
     "return-type": "json",
     "interval": 1,
     "escape": true,

@@ -61,3 +61,4 @@ set -x SONAR_SCANNER_HOME /opt/sonar-scanner
 set -x PATH $SONAR_SCANNER_HOME/bin $PATH
 # --- Rust / Cargo ---
 set -gx PATH "$HOME/.cargo/bin" $PATH
+zoxide init fish | source
