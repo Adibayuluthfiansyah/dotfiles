@@ -6,7 +6,7 @@ Stow creates symlinks from this repo into `~/.config/`, so configs stay live-edi
 
 ## What's inside
 
-| Directory | What it configures |
+| Directory | What it configure |
 |-----------|-------------------|
 | `hypr/` | Hyprland compositor — windows, workspace rules, animations, input, monitors, env, autostart |
 | `waybar/` | Status bar — modules, styling, custom scripts (network speed, power profile) |
