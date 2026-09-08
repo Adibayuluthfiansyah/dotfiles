@@ -1,0 +1,8 @@
+# Machine-level shell override (Quattro). Merged over the active theme,
+# watched live, survives theme switching. Tracked in dotfiles.
+# Goal: near-invisible bar surface as a refraction mask for HyprGlass,
+# mirroring the old Waybar recipe (window rgba .02 + waybar_glass preset).
+
+[bar]
+# Alpha 0 (invisible) .. 1 (opaque). Low value lets HyprGlass frost the bar.
+background-alpha = 0.05

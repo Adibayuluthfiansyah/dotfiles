@@ -30,68 +30,8 @@
           "id": "omarchy.workspaces"
         },
         {
-          "id": "quicklink-music",
-          "type": "command",
-          "exec": "~/.config/omarchy/bar/scripts/quicklink-icon.sh music",
-          "interval": 3600,
-          "tooltip": "Music",
-          "onClick": "hyprctl dispatch togglespecialworkspace music"
-        },
-        {
-          "id": "quicklink-whatsapp",
-          "type": "command",
-          "exec": "~/.config/omarchy/bar/scripts/quicklink-icon.sh whatsapp",
-          "interval": 3600,
-          "tooltip": "Whatsapp",
-          "onClick": "hyprctl dispatch togglespecialworkspace whatsapp"
-        },
-        {
-          "id": "quicklink-instagram",
-          "type": "command",
-          "exec": "~/.config/omarchy/bar/scripts/quicklink-icon.sh instagram",
-          "interval": 3600,
-          "tooltip": "Instagram",
-          "onClick": "hyprctl dispatch togglespecialworkspace instagram"
-        },
-        {
-          "id": "quicklink-video",
-          "type": "command",
-          "exec": "~/.config/omarchy/bar/scripts/quicklink-icon.sh video",
-          "interval": 3600,
-          "tooltip": "Video",
-          "onClick": "hyprctl dispatch togglespecialworkspace video"
-        },
-        {
-          "id": "quicklink-file",
-          "type": "command",
-          "exec": "~/.config/omarchy/bar/scripts/quicklink-icon.sh file",
-          "interval": 3600,
-          "tooltip": "File",
-          "onClick": "hyprctl dispatch togglespecialworkspace file"
-        },
-        {
-          "id": "quicklink-kitty",
-          "type": "command",
-          "exec": "~/.config/omarchy/bar/scripts/quicklink-icon.sh kitty",
-          "interval": 3600,
-          "tooltip": "Kitty",
-          "onClick": "hyprctl dispatch togglespecialworkspace kitty"
-        },
-        {
-          "id": "quicklink-browser",
-          "type": "command",
-          "exec": "~/.config/omarchy/bar/scripts/quicklink-icon.sh browser",
-          "interval": 3600,
-          "tooltip": "Browser",
-          "onClick": "hyprctl dispatch togglespecialworkspace browser"
-        },
-        {
-          "id": "quicklink-obsidian",
-          "type": "command",
-          "exec": "~/.config/omarchy/bar/scripts/quicklink-icon.sh obsidian",
-          "interval": 3600,
-          "tooltip": "Obsidian",
-          "onClick": "hyprctl dispatch togglespecialworkspace obsidian"
+          "id": "quicklinks",
+          "type": "qml"
         },
         {
           "id": "omarchy.media"
