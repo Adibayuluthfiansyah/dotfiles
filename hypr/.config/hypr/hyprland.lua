@@ -1,23 +1,49 @@
--- hyprland.lua.STAGING — full Lua entrypoint (NOT live until renamed to hyprland.lua)
--- Require order mirrors the old hyprland.conf source order (later wins).
--- Flip procedure: `mv hyprland.lua.staging hyprland.lua` + RESTART Hyprland
--- (logout/login — reload is NOT enough to switch .conf ↔ .lua).
--- Rollback: delete/rename hyprland.lua + RESTART → old .conf takes over.
-package.path = os.getenv("HOME") .. "/.config/hypr/?.lua;" .. package.path
+-- Learn how to configure Hyprland: https://wiki.hypr.land/Configuring/Start/
 
-require("colors") -- palette table (no hl calls; required explicitly per module)
-require("lookandfeel") -- base delta: general/group/misc/decoration/dwindle/...
-require("monitors") -- GDK_SCALE + preferred/auto/1.2
-require("adibayu_input") -- input/touchpad/gestures (D3: kept EXACTLY)
-require("adibayu_tiling") -- ~117 binds + winedit submap (workspaceopt omitted: no Lua equiv)
-require("adibayu_bindings") -- app launcher binds
-require("envs") -- env vars + xwayland + ecosystem
-require("autostart") -- exec-once set (order preserved)
-require("rules") -- 25 window rules
-require("adibayu_media_key") -- swayosd media keys + playerctl
-require("bindings.utilities") -- walker/mako/screenshot/etc binds
-require("bindings.clipboard") -- send_shortcut binds
-require("theme") -- ⚠️ Koyanagi SNAPSHOT 2026-09-08 (re-snapshot after theme set!)
-require("animations.omarchy_animations") -- easeOutQuint set (overrides theme anims)
-require("adibayu_macos") -- macOS override, LAST look block so it wins
-require("hyprglass") -- HyprGlass plugin (guarded; hyprpm autoloads the .so)
+-- Omarchy's bootstrap keeps path setup out of this user config.
+dofile((os.getenv("OMARCHY_PATH") or "/usr/share/omarchy") .. "/default/hypr/bootstrap.lua")
+
+-- Disable all Omarchy default bindings. Add your own in hypr/bindings.lua.
+-- omarchy_default_bindings = false
+--
+-- Disable only bindings for Omarchy's preinstalled apps/web apps while
+-- keeping core window-manager bindings (our app binds cover our needs):
+omarchy_preinstalled_bindings = false
+
+-- Load Omarchy defaults.
+require("default.hypr.omarchy")
+
+-- Put your personal overrides in these files. They're loaded after Omarchy's
+-- defaults so package updates can improve the defaults without rewriting your
+-- ~/.config/hypr files.
+require("hypr.monitors")
+require("hypr.input")
+require("hypr.bindings")
+require("hypr.looknfeel")
+require("hypr.autostart")
+
+-- Toggle config flags dynamically.
+require("default.hypr.toggles")
+
+-- Add any other personal Hyprland configuration below.
+-- o.window("qemu", { workspace = "5" })
+
+-- ── Personal modules (Adibayu) — loaded LAST so they win over defaults.
+-- These adibayu_* files are never touched by Omarchy upgrades (not in any
+-- refresh/retire list); after an upgrade only this entry (+hypr/monitors.lua)
+-- needs re-applying from git. Stock hypr/*.lua files stay pristine.
+require("lookandfeel")
+require("adibayu_input")
+require("adibayu_tiling")
+require("adibayu_bindings")
+require("envs")
+require("rules")
+require("adibayu_media_key")
+require("bindings.utilities")
+require("theme") -- Koyanagi snapshot 2026-09-08; re-snapshot after `theme set`
+require("animations.omarchy_animations")
+require("adibayu_macos") -- macOS override, keep LAST for look
+require("hyprglass") -- guarded; needs hyprpm plugin loaded
+-- NOT required: autostart.lua (launched waybar/mako/swayosd — retired;
+-- stock autostart stands) and bindings/clipboard.lua (deleted; stock
+-- clipboard is terminal-aware and superior).
