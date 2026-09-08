@@ -1,0 +1,140 @@
+{
+  "bar": {
+    "centerAnchor": "omarchy.clock",
+    "layout": {
+      "center": [
+        {
+          "id": "omarchy.indicators"
+        },
+        {
+          "format": "dddd HH:mm",
+          "formatAlt": "d MMMM 'W'ww yyyy",
+          "id": "omarchy.clock",
+          "verticalFormat": "HH\n\u2014\nmm"
+        },
+        {
+          "id": "omarchy.keyboard-layout"
+        },
+        {
+          "id": "omarchy.weather"
+        },
+        {
+          "id": "omarchy.system-update"
+        }
+      ],
+      "left": [
+        {
+          "id": "omarchy.menu"
+        },
+        {
+          "id": "omarchy.workspaces"
+        },
+        {
+          "id": "quicklink-music",
+          "type": "command",
+          "exec": "~/.config/omarchy/bar/scripts/quicklink-icon.sh music",
+          "interval": 3600,
+          "tooltip": "Music",
+          "onClick": "hyprctl dispatch togglespecialworkspace music"
+        },
+        {
+          "id": "quicklink-whatsapp",
+          "type": "command",
+          "exec": "~/.config/omarchy/bar/scripts/quicklink-icon.sh whatsapp",
+          "interval": 3600,
+          "tooltip": "Whatsapp",
+          "onClick": "hyprctl dispatch togglespecialworkspace whatsapp"
+        },
+        {
+          "id": "quicklink-instagram",
+          "type": "command",
+          "exec": "~/.config/omarchy/bar/scripts/quicklink-icon.sh instagram",
+          "interval": 3600,
+          "tooltip": "Instagram",
+          "onClick": "hyprctl dispatch togglespecialworkspace instagram"
+        },
+        {
+          "id": "quicklink-video",
+          "type": "command",
+          "exec": "~/.config/omarchy/bar/scripts/quicklink-icon.sh video",
+          "interval": 3600,
+          "tooltip": "Video",
+          "onClick": "hyprctl dispatch togglespecialworkspace video"
+        },
+        {
+          "id": "quicklink-file",
+          "type": "command",
+          "exec": "~/.config/omarchy/bar/scripts/quicklink-icon.sh file",
+          "interval": 3600,
+          "tooltip": "File",
+          "onClick": "hyprctl dispatch togglespecialworkspace file"
+        },
+        {
+          "id": "quicklink-kitty",
+          "type": "command",
+          "exec": "~/.config/omarchy/bar/scripts/quicklink-icon.sh kitty",
+          "interval": 3600,
+          "tooltip": "Kitty",
+          "onClick": "hyprctl dispatch togglespecialworkspace kitty"
+        },
+        {
+          "id": "quicklink-browser",
+          "type": "command",
+          "exec": "~/.config/omarchy/bar/scripts/quicklink-icon.sh browser",
+          "interval": 3600,
+          "tooltip": "Browser",
+          "onClick": "hyprctl dispatch togglespecialworkspace browser"
+        },
+        {
+          "id": "quicklink-obsidian",
+          "type": "command",
+          "exec": "~/.config/omarchy/bar/scripts/quicklink-icon.sh obsidian",
+          "interval": 3600,
+          "tooltip": "Obsidian",
+          "onClick": "hyprctl dispatch togglespecialworkspace obsidian"
+        },
+        {
+          "id": "omarchy.media"
+        }
+      ],
+      "right": [
+        {
+          "id": "netspeed",
+          "type": "command",
+          "exec": "~/.config/omarchy/bar/scripts/netspeed.sh",
+          "interval": 2,
+          "tooltip": "Network speed"
+        },
+        {
+          "id": "omarchy.tray"
+        },
+        {
+          "id": "omarchy.agents"
+        },
+        {
+          "id": "omarchy.bluetooth"
+        },
+        {
+          "id": "omarchy.network"
+        },
+        {
+          "id": "omarchy.audio"
+        },
+        {
+          "id": "omarchy.monitor"
+        },
+        {
+          "id": "omarchy.power"
+        }
+      ]
+    },
+    "position": "top",
+    "transparent": false
+  },
+  "idle": {
+    "lock": 300,
+    "screensaver": 150
+  },
+  "plugins": [],
+  "version": 1
+}

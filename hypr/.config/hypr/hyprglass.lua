@@ -47,9 +47,7 @@ if hl.plugin.hyprglass then
         },
     })
 
-    -- layers { enabled=1, namespaces=waybar, preset=subtle,
-    --          namespace_presets=waybar:waybar_glass,
-    --          namespace_mask_thresholds=waybar=0.005 }
-    -- Whitelist is waybar-only, so the per-namespace call covers preset+threshold.
-    hg.layer("waybar", { preset = "waybar_glass", mask_threshold = 0.005 })
+    -- layers: Quattro bar namespace is omarchy-bar (was waybar).
+    -- Whitelist is omarchy-bar-only, so the per-namespace call covers all.
+    hg.layer("omarchy-bar", { preset = "waybar_glass", mask_threshold = 0.005 })
 end
