@@ -2,8 +2,21 @@
 
 - Tanggal dibuat: 2026-08-13
 - Versi saat ini: Hyprland 0.56.2-1, Omarchy 3.8.2 (stable, generasi .conf)
-- Backup: `~/.config/hypr.bak.1786556388`
-- Status: **BELUM dieksekusi** — config .conf masih berfungsi normal di 0.56.x
+- Backup: `~/.config/hypr.bak.1786556388` + `~/.config/hypr.bak.1788874743` (fresh, pre-migration)
+- Status: **MODUL LUA SELESAI DIBANGUN (2026-09-08, belum flip)** — 5 gelombang,
+  commit per gelombang di repo dotfiles. Entry staging:
+  `hyprland.lua.staging` (INERT sampai di-rename jadi `hyprland.lua`).
+  Sesi live masih jalan `.conf` normal, `configerrors` bersih.
+- Validasi statis: harness stub `hl` (syntax + require graph + runtime,
+  341 calls) + cross-check converter `hyprconf2lua` + API terverifikasi ke
+  source Hyprland (dsp methods, rule fields, gesture actions,
+  HyprGlass README).
+- Diketahui hilang 1 bind: `SUPER SHIFT+T workspaceopt allfloat`
+  (tidak ada padanan Lua di source) — lihat laporan gelombang 4.
+- Theme Koyanagi di-frozen jadi `theme.lua` (snapshot 2026-09-08);
+  wajib re-snapshot tiap `omarchy theme set`.
+- Flip (aktivasi) butuh RESTART Hyprland (logout/login), bukan reload.
+  Rollback: hapus/rename `hyprland.lua` + restart → `.conf` aktif lagi.
 - Warning: "You are using the .conf config format, support for which will be
   removed in Hyprland 0.57." (deprecation notice, PR hyprwm/Hyprland #15538)
 
