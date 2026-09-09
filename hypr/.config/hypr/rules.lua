@@ -143,11 +143,16 @@ hl.window_rule({
     workspace = "special:whatsapp silent",
 })
 
-hl.window_rule({
-    name = "special-file",
-    match = { class = "^(org.gnome.Nautilus)$" },
-    workspace = "special:file silent",
-})
+-- NOTE (2026-09-09): rule file-scratchpad dihapus — bikin SUPER+E "mati"
+-- (tiap Nautilus lahir langsung dibuang sunyi ke special:file, numpuk
+-- tak terlihat). Nautilus sekarang buka normal di workspace aktif.
+-- Filing ke scratchpad tetap via SUPER+CTRL+E (move) + SUPER+SHIFT+E (toggle).
+-- backup rule lama:
+-- hl.window_rule({
+--     name = "special-file",
+--     match = { class = "^(org.gnome.Nautilus)$" },
+--     workspace = "special:file silent",
+-- })
 
 hl.window_rule({
     name = "special-waydroid",
