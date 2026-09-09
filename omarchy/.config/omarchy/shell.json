@@ -24,7 +24,8 @@
       ],
       "left": [
         {
-          "id": "omarchy.menu"
+          "id": "menubtn",
+          "type": "qml"
         },
         {
           "id": "omarchy.workspaces"
