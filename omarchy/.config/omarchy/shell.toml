@@ -5,4 +5,12 @@
 
 [bar]
 # Alpha 0 (invisible) .. 1 (opaque). Low value lets HyprGlass frost the bar.
-background-alpha = 0.05
+# 0.03 mirrors the old Waybar window alpha (.02); raise to 0.05 if legibility drops.
+background-alpha = 0.03
+
+[controls]
+# Aligned to the old Waybar stylesheet (style.css): hover fill white .10,
+# active pill white .18 is already stock, active border 1px white/15.
+hover-cursor-fill-alpha = 0.10
+selected-border-width = 1
+selected-border-alpha = 0.15
