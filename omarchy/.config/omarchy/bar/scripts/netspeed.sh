@@ -1,7 +1,4 @@
 #!/bin/bash
-# netspeed — Quickshell command-module port of waybar net_speed.sh.
-# Plain-text output (no Pango markup — QML does not render it).
-# Interval is set in shell.json (2s); the 1s sample sleep stays inside.
 
 INTERFACE=$(ip route | awk '/default/ {print $5}' | head -n 1)
 

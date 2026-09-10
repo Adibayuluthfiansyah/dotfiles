@@ -1,25 +1,12 @@
-# Machine-level shell override (Quattro). Merged over the active theme,
-# watched live, survives theme switching. Tracked in dotfiles.
-# Goal: near-invisible bar surface as a refraction mask for HyprGlass,
-# mirroring the old Waybar recipe (window rgba .02 + waybar_glass preset).
 
 [bar]
-# Alpha 0 (invisible) .. 1 (opaque). Low value lets HyprGlass frost the bar.
-# 0.03 mirrors the old Waybar window alpha (.02); raise to 0.05 if legibility drops.
 background-alpha = 0.03
-# Bar height 26 -> 32: old Waybar was 45px, current felt cramped.
-# scale-with-font (theme default true) keeps proportions on font change.
 size-horizontal = 32
 
 [font]
-# 12 -> 13:Dh scales bar chrome proportionally (scale-with-font).
-# NOTE: custom QML modules use fixed pixelSize — keep them in sync manually
-# (quicklinks.qml + menubtn.qml use 17px at base-size 13).
 base-size = 13
 
 [controls]
-# Aligned to the old Waybar stylesheet (style.css): hover fill white .10,
-# active pill white .18 is already stock, active border 1px white/15.
 hover-cursor-fill-alpha = 0.10
 selected-border-width = 1
 selected-border-alpha = 0.15

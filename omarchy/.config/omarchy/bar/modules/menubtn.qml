@@ -1,10 +1,5 @@
 import QtQuick
 
-// menubtn — Arch logo button replacing the stock omarchy.menu bar button.
-// Stock button is hardcoded (Omarchy glyph, packaged source — must not edit).
-// This custom module keeps identical behavior: left = root menu popup,
-// right = terminal. White, matching the old Waybar omarchy logo.
-// Tracked in dotfiles; shell.json {"id":"menubtn","type":"qml"}.
 Item {
   property var bar
   property string moduleName

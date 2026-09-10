@@ -1,12 +1,5 @@
 import QtQuick
 
-// quicklinks — scratchpad launcher icons with macOS-muted brand colors.
-// Ported from the old Waybar style.css brand palette (muted, 0.75 alpha)
-// + hover opacity behavior. Click toggles the matching special workspace
-// (same binds as SUPER+SHIFT+*).
-// NOTE: font.family MUST mirror the bar (bar.fontFamily) — bare QML Text
-// uses the app default font, in which Nerd PUA glyphs render zero-width
-// (verified 2026-09-09). Tracked in dotfiles; shell.json {"id":"quicklinks","type":"qml"}.
 Item {
   property var bar
   property string moduleName
@@ -22,7 +15,6 @@ Item {
 
   function iconFont() {
     return "CaskaydiaMono Nerd Font" // hardcoded: verified present via fc-list;
-    // bar.fontFamily + monospace both render PUA glyphs zero-width here
   }
 
   Row {
