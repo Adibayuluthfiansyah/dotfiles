@@ -2,7 +2,7 @@
 
 Personal dotfiles managed with [GNU Stow](https://www.gnu.org/software/stow/).
 
-Stow creates symlinks from this repo into `~/.config/`, so configs stay live-editable and version-controlled in one place.
+Stow create symlinks from this repo into `~/.config/`, so configs stay live-editable and version-controlled in one place.
 
 ## What's inside
 
