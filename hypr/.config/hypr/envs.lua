@@ -8,6 +8,9 @@ hl.env("HYPRCURSOR_SIZE", "28")
 hl.env("XCURSOR_THEME", "Vimix-cursors")
 hl.env("WLR_NO_HARDWARE_CURSORS", "1")
 
+-- Hybrid Intel+NVIDIA: force Intel VA-API for video decode
+hl.env("LIBVA_DRIVER_NAME", "iHD")
+
 -- Force all apps to use Wayland
 hl.env("GDK_BACKEND", "wayland,x11,*")
 hl.env("QT_QPA_PLATFORM", "wayland;xcb")
