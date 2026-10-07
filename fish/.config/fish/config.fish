@@ -37,6 +37,7 @@ if status is-interactive && type -q fastfetch && not set -q FASTFETCH_SHOWN
     clear
     echo "" 
     fastfetch \
+        --logo-type builtin \
         --logo arch \
         --logo-color-1 $c \
         --logo-color-2 $c \
@@ -52,7 +53,7 @@ end
 
 # --- oh-my-posh ---
 if type -q oh-my-posh
-    oh-my-posh init fish --config ~/.poshthemes/sonicboom_dark.omp.json | source
+    oh-my-posh init fish --config ~/.poshthemes/wholespace-custom.omp.json | source
 end
 
 
