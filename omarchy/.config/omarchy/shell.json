@@ -28,11 +28,7 @@
           "type": "qml"
         },
         {
-          "id": "omarchy.workspaces"
-        },
-        {
-          "id": "quicklinks",
-          "type": "qml"
+          "id": "adibayu.workspaces"
         },
         {
           "id": "omarchy.media"
@@ -70,7 +66,8 @@
       ]
     },
     "position": "top",
-    "transparent": false
+    "transparent": true,
+    "id": "adibayu.bar"
   },
   "idle": {
     "lock": 300,
