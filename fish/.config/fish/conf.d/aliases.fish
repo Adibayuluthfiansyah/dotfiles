@@ -5,9 +5,6 @@ alias ports='sudo ss -tulnp'
 alias myip='curl -s ifconfig.me'
 alias jctl='journalctl -xe'
 
-# ---------------------------
-# 📁 File System
-# ---------------------------
 alias ls='eza -a --icons=always'
 alias ll='eza -al --icons=always'
 alias lt='eza -a --tree --level=1 --icons=always'
